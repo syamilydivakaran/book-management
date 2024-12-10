@@ -664,7 +664,19 @@ async function DeleteBook(bookId) {
     }
     return "⇅";
   };
+/*
+const searchWithTitle = (searchTerm) => {
+  setSearchTerm(searchTerm); // Update search term state
+  const lowerCaseSearchTerm = searchTerm.toLowerCase();
 
+  // Filter books by title containing the search term (case-insensitive)
+  const filteredResults = books.filter((book) =>
+    book.title.toLowerCase().includes(lowerCaseSearchTerm)
+  );
+
+  setFilteredBooks(filteredResults); // Update filtered books state
+};
+*/
 
 useEffect(() => {
   setFilteredBooks(books);
