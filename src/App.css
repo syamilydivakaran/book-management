@@ -36,3 +36,518 @@
     transform: rotate(360deg);
   }
 }
+h3 {
+  text-align: center;   
+  color: rgb(239, 205, 205);
+  font-family: 'Dancing Script', cursive;        
+}
+
+
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 3cm;
+  width: 100%;
+}
+
+.header-container {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  margin-top: -38px !important; 
+ 
+}
+
+.ribbon {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  background-color: #9b937b2b;
+  z-index: 0;
+  transform: skew(-20deg);
+  top: 0;
+  left: 0;
+}
+
+.custom-button {
+  background-color: #24722580;
+  border-color: #24722580;
+  color: #fff;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+
+/* Button hover effect */
+.custom-button:hover {
+  background-color: #122603; 
+}
+
+.viewCloseButton {
+  background-color: #1a7a1cdb; /* Set background color */
+  border-color: #1a7a1ce8;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.viewCloseButton:hover {
+  background-color: #1a5c1a;
+  border-color: #1a5c1a;
+}
+
+
+
+/* Table Styles */
+.table {
+  background-color: rgba(245, 222, 179, 0.8);
+  color: #0a240a;
+  border-color: #0a240a;
+  backdrop-filter: blur(5px);
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.table thead th {
+  background-color: #24722580;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #0b0b0b;
+}
+
+.table tbody td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #0b0b0b;
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: rgba(210, 180, 140, 0.3);
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: rgba(245, 245, 220, 0.8);
+}
+
+
+/* Button Styles */
+.table button {
+  background-color: #f3e6f8; /* Light lavender button background */
+  color: #24722580; /* Lavender text color */
+  border: none; /* Remove button border */
+  padding: 5px 10px; /* Add padding for button size */
+  border-radius: 5px; /* Rounded corners for buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.table button:hover {
+  background-color: #e2d4f2; /* Slightly darker shade on hover */
+}
+
+/* Add custom spacing and alignment for the table */
+.table-container {
+  margin-top: -2cm; /* Adjust the top spacing as needed */
+  display: flex;
+  justify-content: center; /* Center the table */
+  align-items: center;
+}
+
+/* Styles for round action buttons */
+.icon-button {
+  width: 40px; /* Round button size */
+  height: 40px;
+  border-radius: 50%; /* Circular button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none; /* Remove border */
+  font-size: 18px; /* Icon size */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth hover effect */
+  margin: 0 5px;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Update button styles */
+.update-btn {
+  background-color: #6a4c93; /* Lavender for Update */
+}
+
+.update-btn:hover {
+  background-color: #583774; /* Darker lavender on hover */
+}
+
+
+.action-buttons {
+  display: flex;
+  justify-content: space-evenly; /* Space between buttons */
+  align-items: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+h1 {
+  color: white; /* Set text color to white */
+  font-family: 'Dancing Script', cursive; /* Apply curly, catchy font */
+  font-size: 4rem; /* Adjust font size as needed */
+  text-align: center; /* Center the text horizontally */
+  font-weight: bold; /* Optional: Make the font bold */
+  letter-spacing: 2px; /* Optional: Add some letter spacing for a stylish look */
+  text-transform: uppercase; /* Optional: Capitalize the text */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  align-items: center; /* Align vertically if needed */
+  width: 100%; /* Make sure the container takes up full width */
+}
+
+
+
+.custom-button-save {
+  background-color: #1a7a1cdb; /* Set background color */
+  border-color: #1a7a1ce8; /* Set border color */
+  color: white; /* Set text color */
+  padding: 10px 20px; /* Adjust padding for better button appearance */
+  font-size: 16px; /* Adjust font size */
+  border-radius: 5px; /* Slightly rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+  width: 100px;
+}
+
+.custom-button-save:hover {
+  background-color: #155d22;
+}
+
+.custom-button:hover {
+  background-color: #155d22; /* Darker background on hover */
+}
+
+/* Modal width increase */
+.modal-dialog {
+  max-width: 80%; /* Increase modal width */
+  max-height: 1000px;
+  
+}
+.modal-content{
+  background-image: url('https://book-management-syamily.netlify.app/bookth.png');
+}
+/* Ensures labels are above input boxes */
+.form-group {
+  margin-bottom: 15px; /* Space between label and input */
+}
+
+.form-group label {
+  font-size: 14px; /* Slightly smaller font size for labels */
+  margin-bottom: 5px; /* Space between label and input */
+}
+
+.form-control {
+  width: 30%; /* Ensure input boxes take up the full width */
+  padding: 10px; /* Padding inside the input fields */
+  border-radius: 5px; /* Rounded corners for input boxes */
+  border: 1px solid #ccc; /* Light gray border */
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between; /* Space out the input fields evenly */
+  margin-bottom: 15px; /* Space between rows */
+}
+
+.form-row .form-group {
+  width: 48%; /* Two form groups per row */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Center the Save button */
+  margin-top: 20px; /* Space above the button */
+}
+
+.custom-button {
+  background-color: #1a7a1cdb; 
+  border-color: #1a7a1ce8; 
+  color: white; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease; 
+  width: 165px;
+}
+
+.custom-button:hover {
+  background-color: #155a16; 
+}
+/* Form Row: Ensures elements are aligned horizontally */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Adjust gap between the two fields */
+  flex-wrap: wrap; /* Allows wrapping if the screen size is too small */
+}
+
+/* Individual form-group style for better control */
+.form-group {
+  flex: 1; /* Makes each field take equal space */
+  min-width: 200px; /* Prevents fields from becoming too narrow */
+  margin-bottom: 15px;
+}
+
+/* Adjust file input width to fill its container */
+.uploadFile {
+  width: 100%;
+  margin-top: 5px;
+}
+/* Modal Styling */
+.book-registration {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow-y: auto; /* Handle overflow */
+  max-height: 90vh; /* Limit the height */
+}
+
+/* Modal Header */
+.book-registration .modal-header {
+  background-color: #1a7a1cdb;
+  color: white;
+  padding: 15px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Form Elements */
+.book-registration .form-group {
+  margin-bottom: 15px;
+}
+
+/* Input and Select Styling */
+.book-registration input[type="text"],
+.book-registration input[type="date"],
+.book-registration input[type="number"],
+.book-registration select,
+.book-registration textarea,
+.book-registration input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Input Labels */
+.book-registration label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  color: #f7efef;
+}
+
+/* Error Messages */
+.book-registration .error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Description Textarea */
+.book-registration textarea {
+  resize: none;
+  overflow-y: scroll; /* Adds vertical scroll bar */
+  max-height: 250px;  /* Increased maximum height */
+  height: 150px;   /* Set a maximum height */
+}
+
+
+/* Buttons */
+.book-registration .button-container {
+  text-align: right;
+}
+
+.book-registration .btn {
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+/* Close Button */
+.book-registration .close {
+  font-size: 1.5rem;
+  color: white;
+  background: none;
+  border: none;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .book-registration {
+    padding: 15px;
+  }
+
+  .book-registration .form-row {
+    flex-direction: column;
+  }
+
+  .book-registration .form-group {
+    width: 100%;
+  }
+}
+.book-registration input[type="text"],
+.book-registration input[type="date"],
+.book-registration input[type="number"],
+.book-registration select,
+
+.book-registration input[type="file"] {
+  height: 45px; /* Adjust the height as needed */
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Container for the input and icon */
+.input-icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Input styling */
+.input-icon-container .form-control {
+  padding-right: 30px; /* Add padding to avoid overlapping the icon */
+}
+
+/* Search icon styling */
+.search-icon {
+  position: absolute;
+  right: 10px;
+  color: #ccc;
+  font-size: 1.2em;
+  top: 50%;
+  transform: translateY(-50%);
+  
+}
+/* Image container styling */
+#image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Add some space below the image */
+}
+
+
+.search-container{
+  width: '100px'; 
+  padding: '8px';
+  border: '1px solid #ccc';
+  
+}
+
+#bookThumbnail {
+  max-width: 80px;   /* Reduce the width */
+  max-height: 80px;  /* Reduce the height */
+  margin: 10px auto;
+  display: block;
+  border-radius: 8px;    /* Rounded corners */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+}
+
+/* Custom white-bordered buttons */
+.btn-outline-white {
+  background-color: transparent;
+  color: #000; /* Black text for contrast */
+  border: 1px solid #ffffff; /* Pure white border */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-white:hover {
+  background-color: #ffffff; /* White background on hover */
+  color: #000; /* Black text on hover */
+}
+
+.btn-outline-white:disabled {
+  opacity: 0.5; /* Disabled button styling */
+  cursor: not-allowed;
+}
+
+.btn-custom-selected {
+  background-color: #1a7a1cdb !important; /* Selected button color */
+  color: white !important; /* White text */
+  border-color: #1a7a1cdb !important; /* Match border with background */
+}
+
+.pagination-button{
+  color: white;
+  border-color: white;
+}
+.modal-footer.fixed-footer {
+  position: sticky;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 1050;
+  border-top: 1px solid #dee2e6;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+/* Image upload container with flexbox */
+.image-upload-container {
+  display: flex;
+  align-items: flex-start; /* Align elements at the top */
+  gap: 20px; /* Space between input and image preview */
+}
+
+/* Label above the file input */
+.image_lbl {
+  margin-bottom: 8px; /* Adds space between label and input */
+}
+
+/* Style for file input */
+.image-upload-container input[type="file"] {
+  width: 50%; /* Keeps the file input field at 50% width */
+}
+
+/* Image preview styling */
+.image-preview {
+  display: flex;
+  justify-content: center; /* Centers the image preview */
+  align-items: center; /* Centers the image vertically */
+  width: 50%; /* Ensure the preview takes 50% of the space */
+}
+
+/* Image styling within preview */
+.image-preview img {
+  max-width: 100%; /* Image should fill the container */
+  max-height: 80px; /* Limit the height of the image */
+  border: 1px solid #ccc; /* Border around the image */
+  border-radius: 5px; /* Rounded corners for the image */
+}

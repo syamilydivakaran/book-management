@@ -1,0 +1,91 @@
+body {
+    background-image: url('https://book-management-syamily.netlify.app/book.png');
+    background-size: cover;
+    background-position: center center;
+ 
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  img {
+    border-radius: 8px;
+    margin-bottom: 20px;
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 10px 0;
+    line-height: 1.6;
+  }
+  
+  strong {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  button {
+    background-color: #24722580;
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #1c5c1f; 
+  }
+  
+  p.no-book-message {
+    font-size: 1.2rem;
+    color: #d9534f;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .container {
+    position: relative; 
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  .gotoBookList {
+    background-color: rgba(26, 122, 28, 0.86);
+    border-color: rgba(26, 122, 28, 0.86);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px
+  }
+  
+  .gotoBookList:hover {
+    background-color: #122603;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+  h2{
+    font-family: 'Dancing Script', cursive;
+  }
