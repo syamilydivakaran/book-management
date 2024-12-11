@@ -277,6 +277,14 @@ const handleClick = async (book) => {
             googleBook.imageLinks?.thumbnail || 
             "https://book-management-syamily.netlify.app/book-thumbnail.jpg";
 
+            console.log("fetching the image path : ",bookDetails.bookCover);
+            const bookDetailsss = await response.json();
+            console.log("Fetched Book Details: ", bookDetailsss); // Log the fetched book details
+
+            // Log the final image URL
+            const imageUrl = `${process.env.REACT_APP_API_URL}${bookDetails.bookCover}`;
+            console.log("Final Image URL: ", imageUrl);  // Log the final image URL
+
           bookDetails.description = googleBook.description || "No description available.";
 
           // Fetch reviews from New York Times API
