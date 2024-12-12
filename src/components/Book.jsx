@@ -277,14 +277,7 @@ const handleClick = async (book) => {
             googleBook.imageLinks?.thumbnail || 
             "https://book-management-syamily.netlify.app/book-thumbnail.jpg";
 
-            console.log("fetching the image path : ",bookDetails.bookCover);
-            const bookDetailsss = await response.json();
-            console.log("Fetched Book Details: ", bookDetailsss); // Log the fetched book details
-
-            // Log the final image URL
-            const imageUrl = `${process.env.REACT_APP_API_URL}${bookDetails.bookCover}`;
-            console.log("Final Image URL: ", imageUrl);  // Log the final image URL
-
+          console.log("fetching the image path : ", bookDetails.bookCover);
           bookDetails.description = googleBook.description || "No description available.";
 
           // Fetch reviews from New York Times API
@@ -311,12 +304,12 @@ const handleClick = async (book) => {
     } else {
       console.warn("ISBN not available for this book.");
     }
-    if(!bookDetails.bookCover||!bookDetails.bookCover.startsWith('http'))
 
-      {
-        bookDetails.bookCover = "https://book-management-syamily.netlify.app/book-thumbnail.jpg";
-      } 
-      console.log("book cover :",bookDetails.bookCover);
+    // Ensure the book cover is set, and use a default if not
+    if (!bookDetails.bookCover || !bookDetails.bookCover.startsWith('http')) {
+      bookDetails.bookCover = "https://book-management-syamily.netlify.app/book-thumbnail.jpg";
+    }
+    console.log("Final book details before navigating: ", bookDetails);
 
     // Pass book details (including Google API data and reviews) to the next page
     navigate("/book-details", { state: { book: bookDetails } });
@@ -324,6 +317,7 @@ const handleClick = async (book) => {
     console.error("Error fetching book details:", error);
   }
 };
+
 
 async function editBook(book) {
   setBookId(book.bookId);
