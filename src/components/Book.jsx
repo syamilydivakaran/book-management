@@ -523,6 +523,8 @@ async function save(event) {
           uploadedFilePath = textResponse;
         }
         console.log("Image uploaded successfully:", uploadedFilePath);
+        const bookDetailsss = await response.json();
+        console.log("Fetched Book Details: ", bookDetailsss);
       } else {
         console.error("Image upload failed:", response.status, await response.text());
         alert("Image upload failed. Please try again.");
@@ -672,19 +674,7 @@ async function DeleteBook(bookId) {
     }
     return "⇅";
   };
-/*
-const searchWithTitle = (searchTerm) => {
-  setSearchTerm(searchTerm); // Update search term state
-  const lowerCaseSearchTerm = searchTerm.toLowerCase();
 
-  // Filter books by title containing the search term (case-insensitive)
-  const filteredResults = books.filter((book) =>
-    book.title.toLowerCase().includes(lowerCaseSearchTerm)
-  );
-
-  setFilteredBooks(filteredResults); // Update filtered books state
-};
-*/
 
 useEffect(() => {
   setFilteredBooks(books);
