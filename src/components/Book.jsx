@@ -339,7 +339,8 @@ async function editBook(book) {
 
   // Check if the book has a locally uploaded bookCover
   if (book.bookCover) {
-    imageUrl = `${process.env.REACT_APP_API_URL}${book.bookCover}`; // Prepend localhost and port to the relative path
+   // imageUrl = `${process.env.REACT_APP_API_URL}${book.bookCover}`; 
+   imageUrl = book.bookCover;
   } else if (book.isbn) {
     // Try fetching the image from Google Books API if ISBN is available
     try {
