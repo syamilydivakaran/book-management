@@ -523,8 +523,7 @@ async function save(event) {
           uploadedFilePath = textResponse;
         }
         console.log("Image uploaded successfully:", uploadedFilePath);
-        const bookDetailsss = await response.json();
-        console.log("Fetched Book Details: ", bookDetailsss);
+        
       } else {
         console.error("Image upload failed:", response.status, await response.text());
         alert("Image upload failed. Please try again.");
