@@ -311,6 +311,12 @@ const handleClick = async (book) => {
     } else {
       console.warn("ISBN not available for this book.");
     }
+    if(!bookDetails.bookCover||!bookDetails.bookCover.startsWith('http'))
+
+      {
+        bookDetails.bookCover = "https://book-management-syamily.netlify.app/book-thumbnail.jpg";
+      } 
+      console.log("book cover :",bookDetails.bookCover);
 
     // Pass book details (including Google API data and reviews) to the next page
     navigate("/book-details", { state: { book: bookDetails } });
@@ -359,8 +365,8 @@ async function editBook(book) {
   }
 
   // Set the image preview or hide it if no image is available
-  setBookImage(imageUrl); // Use this to manage the preview
-  setBookCover(book.bookCover); // Retain the uploaded bookCover value for saving
+  setBookImage(imageUrl); 
+  setBookCover(book.bookCover); 
 }
 
 
