@@ -170,7 +170,7 @@ const validateIsbnAndSearchBook = async () => {
 
   try {
     const response = await axios.get(
-      `https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}`
+     `${process.env.REACT_APP_API_URL}/bookMaster/proxyGoogleBooks?isbn=${isbn}`
     );
 
     if (response.status !== 200 || !response.data.items) {
@@ -263,7 +263,7 @@ const handleClick = async (book) => {
       try {
         // Fetch additional data from the Google Books API using the ISBN
         const googleBooksResponse = await fetch(
-          `https://www.googleapis.com/books/v1/volumes?q=isbn:${bookDetails.isbn}`
+         `${process.env.REACT_APP_API_URL}/bookMaster/proxyGoogleBooks?isbn=${bookDetails.isbn}`
         );
         const googleBooksData = await googleBooksResponse.json();
 
@@ -345,7 +345,7 @@ async function editBook(book) {
     // Try fetching the image from Google Books API if ISBN is available
     try {
       const googleBooksResponse = await axios.get(
-        `https://www.googleapis.com/books/v1/volumes?q=isbn:${book.isbn}`
+      `${process.env.REACT_APP_API_URL}/bookMaster/proxyGoogleBooks?isbn=${book.isbn}`
       );
       const googleBooksData = googleBooksResponse.data;
 
